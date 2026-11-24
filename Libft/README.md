@@ -59,14 +59,14 @@ struct s_list 	*next;
 ## Description of the library
 
 ### Prat 1 - Libc functions
-| Function | descrip |
+| Function | Descrip |
 | - | - |
-| `ft_isalpha` | Checks  for an alphabetic character. |
-| `ft_isdigit` | Checks for a digit. |
-| `ft_isalnum` | Checks for an alphanumeric character. |
-| `ft_isascii` | Checks whether the ASCII character set. |
-| `ft_isprint` | Checks for any printable character including space. |
-| `ft_strlen`  | Count the length of the string, excluding the terminating null byte ('\0') |
+| `ft_isalpha` | Checks  for an alphabetic character. If true retrun 1, if false return 0. |
+| `ft_isdigit` | Checks for a digit. If true retrun 1, if false return 0. |
+| `ft_isalnum` | Checks for an alphanumeric character. If true retrun 1, if false return 0. |
+| `ft_isascii` | Checks whether the ASCII character set. If true retrun 1, if false return 0. |
+| `ft_isprint` | Checks for any printable character including space. If true retrun 1, if false return 0. |
+| `ft_strlen`  | Count the length of the string, excluding the terminating null byte ('\0'). |
 | `ft_memset`  | Fills the first `n` bytes of the memory area pointed to by `s` with the constant byte `c`.|
 | `ft_bzero`   | Fills the first n bytes of the memory area pointed to by `s` with '\0'.
 | `ft_memcpy`  | Copies `n` bytes from memory area src to memory area dest.
@@ -81,11 +81,38 @@ struct s_list 	*next;
 | `ft_memchr`  | Scans the initial n bytes of the memory area pointed to by `s` for the first instance of `c`.  Both `c` and the bytes of  the  memory area pointed to by `s` are interpreted as unsigned char. |
 | `ft_memcmp`  | Compares the first n bytes (each interpreted as unsigned char) of the memory areas `s1` and `s2`. |
 | `ft_strnstr` | In ```big```, find the first occurrence of the string ```little``` and return a pointer to it. If it is not found, return NULL. The string ```little``` must end with `'\0'`, and its length must not exceed the length of `big` (excluding the terminating `'\0'`). |
-| `ft_atoi`    | Converts the initial portion of the string pointed to by nptr to int. |
+| `ft_atoi`    | Converts the initial portion of the string pointed to by `nptr` to int. |
+| `ft_calloc`  | Do same thing like malloc, but in the variable all is `'\0'`. |
+| `ft_strdup`  | Allocate memory for a new string and return a copy of `s`. |
 
+### Part 2 - Additional functions
+| Function | descrip |
+| - | - |
+| `ft_substr` | Allocate memory and returns a substring of `s`. The substring starts at index `start` and has a maximum length of `len`. |
+| `ft_strjoin` | Allocates memory and returns a new string, which is the result of concatenating `s1` and `s2`. |
+| `ft_strtrim` | Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and the end. |
+| `ft_split` | Allocates memory and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter. Each string in the returned array is allocated independently. The array of pointers itself is also dynamically allocated. The returned array will be NULL-terminated. |
+| `ft_itoa`  | Allocates memory and returns a string representing the integer passed as an argument. It also  handle negative numbers. |
+| `ft_strmapi` | Applies the function `f` to each character of the string `s`, passing its index as the first argument and the character itself as the second argument. A new string is created to store the results of successive applications of `f`. |
+| `ft_striteri` | Applies the function `f` to each character of the string passed as argument, passing its index as the first argument. Each character is passed by address to `f` so it can be modified if necessary. |
+| `ft_putchar_fd` | Outputs the character `c` to the specified file descriptor. |
+| `ft_putstr_fd` | Outputs the string `s` to the specified file descriptor. |
+| `ft_putendl_fd` | Outputs the string `s` to the specified file descriptor followed by a newline. |
+| `ft_putnbr_fd` | Outputs the integer `n` to the specified file descriptor. |
 
+### Part 3 - Link list
+
+| Function | descrip |
+| - | - |
+| `ft_lstnew` | Allocates memory and returns a new node. The pointer passed as the `content` parameter is assigned to the node's content field. The `next` field is initialized to `NULL`. |
+| `ft_lstadd_front` | Adds the node `new` at the beginning of the list. |
+| `ft_lstsize` | Counts the number of nodes in the list. |
+| `ft_lstlast` | Returns the last node of the list. |
+| `ft_lstadd_back` | Adds the node `new` at the end of the list. |
+| `ft_lstdelone` | Takes a node as parameter and frees its content using the function `del`. Free the node itself but does NOT free the next node. |
+| `ft_lstclear` | Deletes and frees the given node and all its successors, using the function `del` to free their `content`. Finally, sets the pointer to the list to `NULL`. |
 
 ## Resources
-- man of terminal.
+- Manual of Linux.
 - runoob.com
 - AI - searching information, error testing, edge cases.
