@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achen <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: achen <achen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-11-07 17:01:15 by achen             #+#    #+#             */
-/*   Updated: 2026-11-07 17:01:15 by achen            ###   ########.fr       */
+/*   Created: 2026/11/07 17:01:15 by achen             #+#    #+#             */
+/*   Updated: 2026/11/25 17:36:05 by achen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,9 @@
 
 static char	*count_mk_malloc(int n, unsigned int *len)
 {
-	int	negative;
-
 	*len = 0;
 	if (n < 0)
 	{
-		negative = -1;
 		*len += 1;
 	}
 	while (n != 0)

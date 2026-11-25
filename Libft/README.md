@@ -3,7 +3,7 @@
 # Libft
 
 ## Description
-**Libft** is the first project of the 42 Common Core. All functions in this directory have names starting with `ft_` and have been successfully compiled with the flags ```-Wall -Wextra -Werror```.
+**Libft** is the first project of the 42 Common Core. The goal is make All functions in this directory have names starting with `ft_` and have been successfully compiled with the flags ```-Wall -Wextra -Werror```.
 <br>This project consists of three parts.
 
 1. **Libc functions:**
@@ -13,7 +13,7 @@ Custom C library that re-implements standard C library functions(such as 'strlen
 Develop a set of functions that are either not included in
 the libc, or exist in a different form.
 
-3. **linked list:**
+3. **Linked list:**
 Function for manipulating linked lists using dynamically allocated memory.
 
 
@@ -21,7 +21,7 @@ Function for manipulating linked lists using dynamically allocated memory.
 
 ### Features
 | Command       | Description |
-| - | - |
+| :---- | :---- |
 | `make`        | Compiles the functions for to `.o` and creates `libft.a` |
 | `make clean`  | Removes all `.o` object files.|
 | `make fclean` | Removes all `.o` object files and `libft.a` library. |
@@ -42,25 +42,16 @@ Example:
 cc -Wall -Wextra -Werror project.c libft.a
 ```
 
-### Link list
-On part 3, link list has definit using the `t_list` structure:
-```c
-typedef struct 	s_list
-{
-	void 			*content;
-struct s_list 	*next;
-} 				t_list;
-```
 | Member | Description |
-| - | - |
+| :---- | :---- |
 | `content` | A `void *` pointer to the data stored in this node. |
 | `next` | The pointer of the next node, or NULL if the current node is the last one. |
 
 ## Description of the library
 
-### Prat 1 - Libc functions
-| Function | Descrip |
-| - | - |
+### Part 1 - Libc functions
+| Function | Description |
+| :---- | :---- |
 | `ft_isalpha` | Checks  for an alphabetic character. If true retrun 1, if false return 0. |
 | `ft_isdigit` | Checks for a digit. If true retrun 1, if false return 0. |
 | `ft_isalnum` | Checks for an alphanumeric character. If true retrun 1, if false return 0. |
@@ -71,7 +62,7 @@ struct s_list 	*next;
 | `ft_bzero`   | Fills the first n bytes of the memory area pointed to by `s` with '\0'.
 | `ft_memcpy`  | Copies `n` bytes from memory area src to memory area dest.
 | `ft_memmove` | Copies `n` bytes from memory area `src` to memory area `dest`, with safely handling overlapping memory. |
-| `ft_ strlcpy`| Copies up to size - 1 characters from the NUL-terminated string `src` to `dst` NUL-terminating the result. |
+| `ft_strlcpy`| Copies up to size - 1 characters from the NUL-terminated string `src` to `dst` NUL-terminating the result. |
 | `ft_strlcat` | Appends the NUL-terminated string `src` to the end of `dst`. It will append at most size - strlen(`dst`) - 1 bytes, NUL-terminating the result.
 | `ft_toupper` | Returns its uppercase equivalent. |
 | `ft_tolower` | Returns its lowercase equivalent. |
@@ -86,11 +77,11 @@ struct s_list 	*next;
 | `ft_strdup`  | Allocate memory for a new string and return a copy of `s`. |
 
 ### Part 2 - Additional functions
-| Function | descrip |
-| - | - |
+| Function | description |
+| :---- | :---- |
 | `ft_substr` | Allocate memory and returns a substring of `s`. The substring starts at index `start` and has a maximum length of `len`. |
 | `ft_strjoin` | Allocates memory and returns a new string, which is the result of concatenating `s1` and `s2`. |
-| `ft_strtrim` | Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and ’the end. |
+| `ft_strtrim` | Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and the end. |
 | `ft_split` | Allocates memory and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter. Each string in the returned array is allocated independently. The array of pointers itself is also dynamically allocated. The returned array will be NULL-terminated. |
 | `ft_itoa`  | Allocates memory and returns a string representing the integer passed as an argument. It also  handle negative numbers. |
 | `ft_strmapi` | Applies the function `f` to each character of the string `s`, passing its index as the first argument and the character itself as the second argument. A new string is created to store the results of successive applications of `f`. |
@@ -101,9 +92,17 @@ struct s_list 	*next;
 | `ft_putnbr_fd` | Outputs the integer `n` to the specified file descriptor. |
 
 ### Part 3 - Link list
+In part 3, linked list has definit using the `t_list` structure:
+```c
+typedef struct 	s_list
+{
+	void 			*content;
+struct s_list 	*next;
+} 				t_list;
+```
 
-| Function | descrip |
-| - | - |
+| Function | description |
+| :---- | :---- |
 | `ft_lstnew` | Allocates memory and returns a new node. The pointer passed as the `content` parameter is assigned to the node's content field. The `next` field is initialized to `NULL`. |
 | `ft_lstadd_front` | Adds the node `new` at the beginning of the list. |
 | `ft_lstsize` | Counts the number of nodes in the list. |
@@ -117,14 +116,16 @@ struct s_list 	*next;
 ## Resources
 ### Documents
 - Manual of Linux.
-- runoob.com
+- [runoob.com](https://www.runoob.com/)
 
 ### Test tool
-- Comment 
+- Commant 
 ```sh
 valgrind --leak-check=full
 ```
-- Claudenette - <https://github.com/rabeloivan/claudenette>
+- [Claudenette](https://github.com/rabeloivan/claudenette)
 
-### AI
-- AI - searching information, error testing, edge cases.
+### AI usage
+- Information research and gathering.
+- Error testing and edge case validation.
+- Grammar correction and proofreading.
