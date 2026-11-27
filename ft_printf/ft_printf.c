@@ -6,7 +6,7 @@
 /*   By: achen <achen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/27 12:49:49 by achen             #+#    #+#             */
-/*   Updated: 2026/11/27 16:21:46 by achen            ###   ########.fr       */
+/*   Updated: 2026/11/27 16:59:54 by achen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	ap;
+	va_list	argsp;
 
-	va_start(ap, str);
+	va_start(argsp, str);
 }
